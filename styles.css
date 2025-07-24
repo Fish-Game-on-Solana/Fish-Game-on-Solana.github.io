@@ -1,0 +1,48 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: black;
+    /* optional: dark bars on sides */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.content-wrapper {
+    width: min(100vw, calc(100vh * (600 / 930)));
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: top;
+    max-height: calc(100vh - min(100vw * (930 / 600)));
+    flex-grow: 1;
+}
+
+.game-section {
+    width: 100%;
+    height: min(100vw * (930 / 600), 100vh);
+    flex-shrink: 0;
+    display: flex;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
